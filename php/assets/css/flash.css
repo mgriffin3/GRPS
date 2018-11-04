@@ -1,0 +1,38 @@
+#flash-container {
+    /*  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  margin: 0;*/
+    display: inline-block;
+    margin: 0px auto;
+    position: fixed;
+    transition: all 1s ease-in-out;
+    z-index: 2000;
+    top: 20px;
+    right: 20px;
+}
+
+.alert-minimalist > [data-flash="icon"] {
+    /* font-size: 15px; */
+    /* padding: 5px 10px; */
+    color: #fff;
+}
+
+.alert-minimalist > [data-flash="message"] {
+    /* float: left; */
+    text-align: left;
+    margin: 6px 8px 6px 10px;
+    /*line-height: 17px;*/
+    position: relative;
+    /*top: 1px;*/
+    color: white;
+}
+
+.alert-box-fixed {
+    margin: 0 15px 15px 0;
+}
+
+.button-form {
+    display: inline-block;
+}
