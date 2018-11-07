@@ -12,11 +12,22 @@ if (isset($_SESSION['email'])) {
   	header('location: home.php');
 }
 
+
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+$conn = connectDB($servername, $username, $password, $dbname);
+
+
+//$conn = new mysqli($sname, $user, $pass, $db);
+
+Function connectDB($sname, $user, $pass, $db){
+	//code moved into a function so it is easier to run tests on
+	$con = new mysqli($sname, $user, $pass, $db);
+	// Check connection
+	if ($con->connect_error) {
+		
+		die("Connection failed: " . $con->connect_error);
+	}
+	return $con;
 } 
 
 $sql = "SELECT * FROM challenges";
