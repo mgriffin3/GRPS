@@ -7,7 +7,7 @@
 	
 	//password and user needs to match in both databases
     $username = "root";
-    $password = "";
+    $password = "MyNewPass";
 	
     $dbname1 = "queue";
 	$dbname2 = "scraper";
@@ -41,9 +41,10 @@
 	   {
 		   $title = $row["title"];
 		   $description = $row["text"];
+		   $url = $row["url"];
 		   
-		  $db->query("INSERT INTO challenges (title,difficulty,description,solved,hint,note) 
-			 VALUES ('".$title . "','easy','".$description. "',0,'none','none')");
+		  $db->query("INSERT INTO challenges (title,difficulty,description,solved,hint,note,url) 
+			 VALUES ('".$title . "','easy','".$description. "',0,'none','none', '".$url."')");
 	   
 	   }
    }
